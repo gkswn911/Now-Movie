@@ -1,0 +1,103 @@
+extends layout
+
+block content
+  doctype html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    link(rel='icon' type='image/x-icon' href='images/nowicon.png')
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    script(src="https://unpkg.com/swiper/swiper-bundle.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script.
+      $(document).ready(function () {
+        $('#about h2').css('color','blue');
+        $('#services h2').css('color','red');
+        $('#contact h2').css('color','orange');
+      })
+  header.bg-primary.text-black
+    h2 찾고싶은 영화를 찾을 수 있습니다.
+  section#about
+    .container
+      .row
+        .col-lg-8.mx-auto
+          h2 최신영화 목록
+          p.lead
+            | 추후
+  section#services.bg-light
+    .container
+      .row
+        .col-lg-8.mx-auto
+          h2 맞춤 영화
+          form(method='get' action='/fitMovie')
+            br
+            p.lead 장르
+            select.custom-select(style='width:150px;' name='genre')
+              option(value='1') 드라마
+              option(value='2') 판타지
+              option(value='4') 공포
+              option(value='5') 로맨스
+              option(value='7') 스릴러
+              option(value='8') 느와르
+              option(value='11') 코미디
+              option(value='14') 전쟁
+              option(value='16') 범죄
+              option(value='18') SF 
+              option(value='21') 에로
+            br
+            br
+            p.lead 국가
+            select.custom-select(style='width:150px;' name='country')
+              option(value='KR') 한국
+              option(value='JP') 일본
+              option(value='US') 미국
+              option(value='HK') 홍콩
+              option(value='GB') 영국
+              option(value='FR') 프랑스
+              option(value='ETC') 기타
+            br
+            br
+            p.lead 원하는 년도
+            select.custom-select(style='width:150px;' name='yearto')
+              option(value='2000') 2000
+              option(value='2001') 2001
+              option(value='2002') 2002
+              option(value='2003') 2003
+              option(value='2004') 2004
+              option(value='2005') 2005
+              option(value='2006') 2006
+              option(value='2007') 2007
+              option(value='2008') 2008
+              option(value='2009') 2009
+              option(value='2010') 2010
+              option(value='2011') 2011 
+              option(value='2012') 2012
+              option(value='2013') 2013
+              option(value='2014') 2014
+              option(value='2015') 2015
+              option(value='2016') 2016
+              option(value='2017') 2017
+              option(value='2018') 2018
+              option(value='2019') 2019
+              option(value='2020') 2020
+              option(value='2021') 2021
+            br
+            br
+            button.icon(type='submit' value="Submit")
+                i.fa.fa-search
+  section#contact
+    .container
+      .row
+        .col-lg-8.mx-auto
+          h2 확진자 조회
+          p.lead
+            | 추후
+  // Footer
+  footer.py-5.bg-dark
+    .container
+      p.m-0.text-center.text-white Copyright &copy; Now Movie 2021
+      p.m-0.text-center.text-white E-mail : gkswn911@naver.com
+      p.m-0.text-center.text-white TEL : 010-5015-6913
