@@ -1,3 +1,3 @@
 # Now-Movie
 
-### With Vue js 
+### Use : Vue JS  + Express JS
